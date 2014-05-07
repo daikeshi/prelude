@@ -12,9 +12,9 @@
 (require 'scala-mode2)
 
 ;; scala ensime
-(add-to-list 'load-path "~/Lib/ensime/src/main/elisp/")
-(require 'ensime)
-(add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
+;; (add-to-list 'load-path "~/Lib/ensime/src/main/elisp/")
+;; (require 'ensime)
+;; (add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
 
 (setq default-directory "~/Project")
 
