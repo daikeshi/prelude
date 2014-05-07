@@ -7,13 +7,19 @@
 (setq prelude-guru nil)
 (setq prelude-whitespace nil)
 
+;; scala mode
+(add-to-list 'load-path "~/Lib/scala-mode2/")
+(require 'scala-mode2)
+
 ;; scala ensime
-(add-to-list 'load-path "~/Lib/ensime_2.9.2/elisp/")
+(add-to-list 'load-path "~/Lib/ensime/src/main/elisp/")
 (require 'ensime)
 (add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
 
 ;; color skeme
 ;; (disable-theme 'zenburn)
+;; M-x package-install RET color-theme-sanityinc-tomorrow RETmo
+(require 'color-theme-sanityinc-tomorrow)
 (load-theme 'sanityinc-tomorrow-night t)
 
 (setq default-directory "~/Project")
@@ -31,4 +37,14 @@
 (setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
 (setq scroll-step 1) ;; keyboard scroll one line at a time
 
+;; write backups to ~/.emacs.d/.backup
+(setq backup-directory-alist '(("." . "~/.emacs.d/backup"))
+    backup-by-copying      t  ; Don't de-link hard links
+    version-control        t  ; Use version numbers on backups
+    delete-old-versions    t  ; Automatically delete excess backups:
+    kept-new-versions      20 ; how many of the newest versions to keep
+    kept-old-versions      5) ; and how many of the old
+
+
+(setq linum-format "%4d \u2502 ")
 
