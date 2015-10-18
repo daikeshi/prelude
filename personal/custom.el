@@ -63,3 +63,6 @@
 ;; change the color of the current line highlight
 (set-face-background 'hl-line "#3e4446")
 (set-face-foreground 'highlight nil)
+
+;; start linum mode
+(global-linum-mode 1)
