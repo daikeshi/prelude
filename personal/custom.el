@@ -8,7 +8,7 @@
 (setq prelude-whitespace nil)
 
 ;; scala mode
-(add-to-list 'load-path "~/Lib/scala-mode2/")
+(add-to-list 'load-path "~/.emacs.d/scala-mode2/")
 (require 'scala-mode2)
 
 ;; scala ensime
